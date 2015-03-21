@@ -104,7 +104,7 @@ class SW_WCLDN_2015 {
 		$rewrite = array(
 			'slug'  => 'work-for',
 			'feeds' => false,
-			'pages' => false,
+			'pages' => true,
 		);
 
 		$args = array(
@@ -116,7 +116,7 @@ class SW_WCLDN_2015 {
 		);
 		register_post_type( 'sw_client', $args );
 
-		add_rewrite_endpoint( 'json', EP_PAGES, 'sw_json' );
+		add_rewrite_endpoint( 'json', EP_PERMALINK, 'sw_json' );
 
 		add_rewrite_rule( 'compare/([^/]+)/?$', 'index.php?sw_compare=$matches[1]' );
 	}
