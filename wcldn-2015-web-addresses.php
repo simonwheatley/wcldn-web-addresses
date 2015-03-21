@@ -129,7 +129,7 @@ class SW_WCLDN_2015 {
 	 * @param array $vars The request variables (passed by reference)
 	 */
 	protected function fixup_json_endpoint_requests( $vars ) {
-		if( isset( $vars['sw_json'] ) && isset( $vars['sw_team'] ) ) {
+		if( isset( $vars['sw_json'] ) && isset( $vars['sw_client'] ) ) {
 			$vars['sw_json'] = true;
 		} else {
 			unset( $vars['sw_json'] );
